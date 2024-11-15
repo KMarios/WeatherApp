@@ -1,0 +1,217 @@
+body {
+    background-color: #ebe4f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    color: gray; /* Initial lighter gray color */
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    clip-path: inset(0 100% 0 0); /* Start fully hidden from the right */
+    animation: revealText 2s ease forwards, darkenText 2s ease forwards;
+    padding: 10px;
+}
+
+/* Reveal text from left to right */
+@keyframes revealText {
+    from {
+        clip-path: inset(0 100% 0 0); /* Fully hidden from the right */
+    }
+    to {
+        clip-path: inset(0 0 0 0); /* Fully visible */
+    }
+}
+
+/* Gradually darken the text color */
+@keyframes darkenText {
+    from {
+        color: lightgray; /* Start with a light gray color */
+    }
+    to {
+        color: #504d50; /* End with a darker gray color */
+    }
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 550px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #ebe4f8;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px #a3b1c6, -5px -5px 6px #ffffff;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding-top: 60px;
+}
+
+.cityInput {
+    width: 280px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: rgb(109, 109, 109);
+    background-color: #ebe4f8;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    box-shadow: inset 4px 4px 5px #a3b1c6, inset -8px -8px 15px #ffffff;
+    transition: 100ms;
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ebe4f8;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px #a3b1c6, -3px -3px 3px #ffffff;
+    margin-top: 2px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.search-icon:hover {
+    border-radius: 8px;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 4px #a3b1c6, -3px -3px 3px #ffffff;
+}
+
+.search-icon:active {
+    transform: scale(0.95);
+    box-shadow:  2px 2px 4px #a3b1c6, -3px -3px 3px #ffffff;
+}
+
+.weather-group{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+    box-shadow: 3px 3px 6px #a3b1c6, -3px -3px 3px #ffffff;
+    padding: 10px 65px; /* Adjust padding as needed */
+    font-size: 40px;
+    font-weight: 400;
+    min-width: 150px; /* Minimum width to prevent the box from being too small */
+}
+
+.weather-temp {
+    display: flex;
+    justify-content: center;
+    color: rgb(109, 109, 109);
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.weather-location {
+    display: flex;
+    justify-content: center;
+    color: rgb(109, 109, 109);
+    font-size: 40px;
+    font-weight: 400;
+    padding: 10px 20px;
+}
+
+.data-group {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.data {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 40px;
+    background-color: #ebe4f8;
+    border-radius: 4px;
+    box-shadow: 3px 3px 6px #a3b1c6, -3px -3px 3px #ffffff;
+    padding: 20px;
+    gap: 4px;
+    font-size: large;
+    color: rgb(109, 109, 109);
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    h3 {
+        font-size: 14px; /* Adjusted size for scaling */
+    }
+
+    .container {
+        width: 350px;
+        height: 450px;
+    }
+
+    .top-bar {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        padding-top: 60px;
+    }
+    
+    .cityInput {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: rgb(109, 109, 109);
+        background-color: #ebe4f8;
+        border-radius: 5px;
+        padding-left: 20px;
+        font-size: 24px;
+        font-weight: 400;
+        box-shadow: inset 4px 4px 5px #a3b1c6, inset -8px -8px 15px #ffffff;
+        transition: 100ms;
+    }
+    
+
+    .weather-group{
+        padding: 30px 65px; /* Adjust padding as needed */
+        font-size: 40px;
+        
+    }
+    
+    .weather-location {
+        font-size: 35px;
+        font-weight: 400;
+        padding: 10px 40px;
+        margin-top: -10px;
+    }
+    
+    .data {
+        width: 100px;
+        height: 40px;
+    }
+    
+}
