@@ -58,13 +58,11 @@ h3 {
 
 .top-bar {
     display: flex;
-    flex-direction: row; /* Ensure horizontal alignment */
-    justify-content: space-between; /* Space out elements */
-    align-items: center; /* Center elements vertically */
-    gap: 10px; /* Space between input and search icon */
-    width: 100%; /* Use full width of the container */
-    padding: 10px; /* Add some padding for spacing */
+    justify-content: center;
+    gap: 14px;
+    padding-top: 60px;
 }
+
 .cityInput {
     width: 280px;
     height: 50px;
@@ -80,28 +78,29 @@ h3 {
     transition: 100ms;
 }
 
-
 .search-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px; /* Smaller size for compactness */
-    height: 40px; /* Consistent height with input */
+    width: 50px;
+    height: 50px;
     background-color: #ebe4f8;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 4px #a3b1c6, -2px -2px 4px #ffffff;
-    margin-top: 0; /* Align with input */
+    box-shadow: 2px 2px 4px #a3b1c6, -3px -3px 3px #ffffff;
+    margin-top: 2px;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .search-icon:hover {
+    border-radius: 8px;
     transform: scale(1.05);
-    box-shadow: 2px 2px 4px #a3b1c6, -2px -2px 4px #ffffff;
+    box-shadow: 2px 2px 4px #a3b1c6, -3px -3px 3px #ffffff;
 }
 
 .search-icon:active {
     transform: scale(0.95);
+    box-shadow:  2px 2px 4px #a3b1c6, -3px -3px 3px #ffffff;
 }
 
 .weather-group{
@@ -175,21 +174,27 @@ h3 {
     }
 
     .top-bar {
-        flex-direction: column; /* Stack input and button vertically */
-        align-items: stretch; /* Stretch to fit container width */
-        gap: 8px; /* Reduce gap for smaller screens */
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        padding-top: 60px;
     }
-
+    
     .cityInput {
-        width: 100%; /* Full width of the container */
-        max-width: none; /* Allow it to expand fully */
-        font-size: 14px; /* Smaller font for compactness */
+        width: 280px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: rgb(109, 109, 109);
+        background-color: #ebe4f8;
+        border-radius: 5px;
+        padding-left: 20px;
+        font-size: 24px;
+        font-weight: 400;
+        box-shadow: inset 4px 4px 5px #a3b1c6, inset -8px -8px 15px #ffffff;
+        transition: 100ms;
     }
-
-    .search-icon {
-        width: 100%; /* Match the input width */
-        height: 40px; /* Consistent height */
-    }
+    
 
     .weather-group{
         padding: 30px 65px; /* Adjust padding as needed */
